@@ -1,0 +1,8 @@
+Lisgen body viewer
+Copyright 2026 Lisgen
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It bundles open data under its own licence (details in assets/LICENCES.md):
+- assets/env: HDR environment photographs from Poly Haven (polyhaven.com), CC0 1.0.
+- assets/fabric: fabric material images from ambientCG (ambientcg.com), CC0 1.0, reduced in size.

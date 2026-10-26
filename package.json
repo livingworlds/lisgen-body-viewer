@@ -1,0 +1,76 @@
+{
+  "name": "@lisgen/body-viewer",
+  "version": "0.1.0",
+  "description": "A browser viewer for a human body and fabric: lighting, shadows, environments, poses, expressions and worn items, with the body from a body service. Generic: it knows no client's size chart, workflow or product.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livingworlds/lisgen-body-viewer.git"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "import": "./dist/client.js"
+    },
+    "./poses": {
+      "types": "./dist/poses.d.ts",
+      "import": "./dist/poses.js"
+    },
+    "./environments": {
+      "types": "./dist/environments.d.ts",
+      "import": "./dist/environments.js"
+    },
+    "./fabrics": {
+      "types": "./dist/fabrics.d.ts",
+      "import": "./dist/fabrics.js"
+    },
+    "./expressions": {
+      "types": "./dist/expressions.d.ts",
+      "import": "./dist/expressions.js"
+    },
+    "./assets": {
+      "types": "./dist/assets.d.ts",
+      "import": "./dist/assets.js"
+    },
+    "./viewport": {
+      "types": "./dist/viewport.d.ts",
+      "import": "./dist/viewport.js"
+    },
+    "./assets/*": "./assets/*",
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "assets",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": ">=18",
+    "three": "0.186.1"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "three": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node test/run.ts"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}
