@@ -8,7 +8,7 @@ const walk = (d: string): string[] => readdirSync(d).flatMap((n) => (statSync(jo
 
 test("package: open licence, public, and every module the README names is exported with its types", () => {
   const pkg = JSON.parse(readFileSync(join(root, "package.json"), "utf8"));
-  assert.equal(pkg.name, "@lisgen/body-viewer"); assert.equal(pkg.license, "Apache-2.0"); assert.equal(pkg.private, undefined);
+  assert.equal(pkg.name, "@livgens/body-viewer"); assert.equal(pkg.license, "Apache-2.0"); assert.equal(pkg.private, undefined);
   for (const sub of [".", "./client", "./poses", "./environments", "./fabrics", "./expressions", "./assets", "./viewport"]) {
     const e = pkg.exports[sub];
     assert.ok(e && e.import && e.types, sub);

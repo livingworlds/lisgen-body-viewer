@@ -14,22 +14,22 @@ npm install github:livingworlds/lisgen-body-viewer#v0.1.0
 
 | Import | What it gives |
 |---|---|
-| `@lisgen/body-viewer` (also `/client`) | `createBodyService`: the body service client |
-| `@lisgen/body-viewer/poses` | standing, sitting, walking, running, hands, ageing posture; linear blend skinning (`posed`) and the rig from the service (`rigFrom`) |
-| `@lisgen/body-viewer/environments` | a studio, a physical sky with the sun for any hour, season and latitude, photographed places |
-| `@lisgen/body-viewer/fabrics` | photographed and built cloth surfaces with their optics, and weave maps |
-| `@lisgen/body-viewer/expressions` | the 52 facial action names and ready expressions |
-| `@lisgen/body-viewer/assets` | worn items: loading them from the service and placing them on a body |
-| `@lisgen/body-viewer/viewport` | the `Viewport` React component |
+| `@livgens/body-viewer` (also `/client`) | `createBodyService`: the body service client |
+| `@livgens/body-viewer/poses` | standing, sitting, walking, running, hands, ageing posture; linear blend skinning (`posed`) and the rig from the service (`rigFrom`) |
+| `@livgens/body-viewer/environments` | a studio, a physical sky with the sun for any hour, season and latitude, photographed places |
+| `@livgens/body-viewer/fabrics` | photographed and built cloth surfaces with their optics, and weave maps |
+| `@livgens/body-viewer/expressions` | the 52 facial action names and ready expressions |
+| `@livgens/body-viewer/assets` | worn items: loading them from the service and placing them on a body |
+| `@livgens/body-viewer/viewport` | the `Viewport` React component |
 
 ## Static files
 
-Environments and fabrics are files under `assets/` (`env/*.hdr`, `env/*.jpg`, `fabric/*.jpg`). Serve that folder from your app, for example by copying `node_modules/@lisgen/body-viewer/assets` into your public folder as `/body-viewer`, and pass its URL as `assetBase` (the default is `/body-viewer`).
+Environments and fabrics are files under `assets/` (`env/*.hdr`, `env/*.jpg`, `fabric/*.jpg`). Serve that folder from your app, for example by copying `node_modules/@livgens/body-viewer/assets` into your public folder as `/body-viewer`, and pass its URL as `assetBase` (the default is `/body-viewer`).
 
 ## The body service
 
 ```ts
-import { createBodyService } from "@lisgen/body-viewer";
+import { createBodyService } from "@livgens/body-viewer";
 
 const body = createBodyService({
   endpoint: "https://<your body service>/body/v1",
@@ -55,7 +55,7 @@ Arrays travel as `{ dtype, shape, base64 }`, little-endian; the client turns the
 ## The viewport
 
 ```tsx
-import { Viewport } from "@lisgen/body-viewer/viewport";
+import { Viewport } from "@livgens/body-viewer/viewport";
 
 <Viewport body={body} assetBase="/body-viewer" latitude={48.1} preview={{ positions: b.vertices, faces: topo.faces, version: 1 }} ... />
 ```
