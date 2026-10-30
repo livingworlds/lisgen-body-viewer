@@ -1,4 +1,4 @@
-# Lisgen body viewer
+# Livgens body viewer
 
 A browser viewer for a human body and fabric: a React component that draws a body or a fabric swatch with three.js WebGPU (WebGL2 fallback), with real lighting, shadows, ambient occlusion, environments, poses, expressions and worn items. Apache-2.0.
 
