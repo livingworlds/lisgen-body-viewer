@@ -1,5 +1,5 @@
 {
-  "name": "@livgens/body-viewer",
+  "name": "@ipnops/body-viewer",
   "version": "0.1.0",
   "description": "A browser viewer for a human body and fabric: lighting, shadows, environments, poses, expressions and worn items, with the body from a body service. Generic: it knows no client's size chart, workflow or product.",
   "license": "Apache-2.0",

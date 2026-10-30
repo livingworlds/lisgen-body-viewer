@@ -1,4 +1,4 @@
-# Livgens body viewer
+# Ipnops body viewer
 
 A browser viewer for a human body and fabric: a React component that draws a body or a fabric swatch with three.js WebGPU (WebGL2 fallback), with real lighting, shadows, ambient occlusion, environments, poses, expressions and worn items. Apache-2.0.
 
@@ -14,22 +14,22 @@ npm install github:livingworlds/lisgen-body-viewer#v0.1.0
 
 | Import | What it gives |
 |---|---|
-| `@livgens/body-viewer` (also `/client`) | `createBodyService`: the body service client |
-| `@livgens/body-viewer/poses` | standing, sitting, walking, running, hands, ageing posture; linear blend skinning (`posed`) and the rig from the service (`rigFrom`) |
-| `@livgens/body-viewer/environments` | a studio, a physical sky with the sun for any hour, season and latitude, photographed places |
-| `@livgens/body-viewer/fabrics` | photographed and built cloth surfaces with their optics, and weave maps |
-| `@livgens/body-viewer/expressions` | the 52 facial action names and ready expressions |
-| `@livgens/body-viewer/assets` | worn items: loading them from the service and placing them on a body |
-| `@livgens/body-viewer/viewport` | the `Viewport` React component |
+| `@ipnops/body-viewer` (also `/client`) | `createBodyService`: the body service client |
+| `@ipnops/body-viewer/poses` | standing, sitting, walking, running, hands, ageing posture; linear blend skinning (`posed`) and the rig from the service (`rigFrom`) |
+| `@ipnops/body-viewer/environments` | a studio, a physical sky with the sun for any hour, season and latitude, photographed places |
+| `@ipnops/body-viewer/fabrics` | photographed and built cloth surfaces with their optics, and weave maps |
+| `@ipnops/body-viewer/expressions` | the 52 facial action names and ready expressions |
+| `@ipnops/body-viewer/assets` | worn items: loading them from the service and placing them on a body |
+| `@ipnops/body-viewer/viewport` | the `Viewport` React component |
 
 ## Static files
 
-Environments and fabrics are files under `assets/` (`env/*.hdr`, `env/*.jpg`, `fabric/*.jpg`). Serve that folder from your app, for example by copying `node_modules/@livgens/body-viewer/assets` into your public folder as `/body-viewer`, and pass its URL as `assetBase` (the default is `/body-viewer`).
+Environments and fabrics are files under `assets/` (`env/*.hdr`, `env/*.jpg`, `fabric/*.jpg`). Serve that folder from your app, for example by copying `node_modules/@ipnops/body-viewer/assets` into your public folder as `/body-viewer`, and pass its URL as `assetBase` (the default is `/body-viewer`).
 
 ## The body service
 
 ```ts
-import { createBodyService } from "@livgens/body-viewer";
+import { createBodyService } from "@ipnops/body-viewer";
 
 const body = createBodyService({
   endpoint: "https://<your body service>/body/v1",
@@ -55,7 +55,7 @@ Arrays travel as `{ dtype, shape, base64 }`, little-endian; the client turns the
 ## The viewport
 
 ```tsx
-import { Viewport } from "@livgens/body-viewer/viewport";
+import { Viewport } from "@ipnops/body-viewer/viewport";
 
 <Viewport body={body} assetBase="/body-viewer" latitude={48.1} preview={{ positions: b.vertices, faces: topo.faces, version: 1 }} ... />
 ```
