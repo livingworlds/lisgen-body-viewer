@@ -7,7 +7,7 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/livingworlds/lisgen-body-viewer.git"
+    "url": "git+https://github.com/ipnops/ipnops-body-viewer.git"
   },
   "exports": {
     ".": {

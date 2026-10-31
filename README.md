@@ -7,7 +7,7 @@ The body itself comes from a body service: the viewer sends controls or measurem
 ## Install
 
 ```
-npm install github:livingworlds/lisgen-body-viewer#v0.1.0
+npm install github:ipnops/ipnops-body-viewer#v0.1.0
 ```
 
 `dist/` holds plain ES modules with type declarations, built from `src/`, so no build step is needed. `react` (18 or later) and `three` (0.186.1) are peer dependencies, needed only for `viewport`.
